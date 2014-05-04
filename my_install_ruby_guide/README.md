@@ -63,6 +63,16 @@ Rails 3.2.13
 然后开始你的 Ruby，Rails 之旅吧。
 欢迎来到 Ruby 的世界！
 
+###步骤5 - Use RVM
+
+`cat use_rvm.sh`
+```sh
+#!/bin/bash     
+##http://ruby-china.org/topics/3705
+bash --login
+rvm  2.0.0 --default
+```
+
 ###其他资源
 ```
 https://github.com/huacnlee/init.d - 快速安装生产环境的 Ubuntu Server 批量脚本
