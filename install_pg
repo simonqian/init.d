@@ -2,7 +2,7 @@ sudo apt-get install postgresql
 sudo  apt-get install libpq-dev 
 gem install pg
 sudo /etc/init.d/postgresql start
-sudo su - postgres | psql | \password postges && CREATE USER rails WITH PASSWORD '123456'; && CREATE DATABASE railsdb OWNER rails; && GRANT ALL PRIVILEGES ON DATABASE railsdb to rails; && \q
+sudo su - postgres | psql | \password postgres && CREATE USER rails WITH PASSWORD '123456'; && CREATE DATABASE railsdb OWNER rails; && GRANT ALL PRIVILEGES ON DATABASE railsdb to rails; && \q
  
 
 #$psql lispdb
