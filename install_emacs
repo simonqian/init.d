@@ -1,0 +1,16 @@
+
+
+sudo add-apt-repository ppa:cassou/emacs ##sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FAF69C646FF368B7
+sudo apt-get update
+sudo apt-get install emacs24 emacs24-el emacs24-common-non-dfsg
+
+##安装lisp环境
+sudo apt-get install common-lisp-controller slime
+
+
+git clone https://github.com/purcell/emacs.d.git ~/.emacs.d
+
+#add .emacs ==>(setq load-path (cons "~/.emacs.d/" load-path)) 
+#                      (require 'init.el) 
+emacs  --debug-init 
+

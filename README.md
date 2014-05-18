@@ -58,4 +58,9 @@ $ ./install_rvm
 $ ./install_pg
 ```
 
+### Install emacs
+
+```bash
+$ ./install_emacs
+```
 
