@@ -5,8 +5,10 @@ sudo /etc/init.d/postgresql start
 sudo su - postgres | psql | \password postgres && CREATE USER rails WITH PASSWORD '123456'; && CREATE DATABASE railsdb OWNER rails; && GRANT ALL PRIVILEGES ON DATABASE railsdb to rails; && \q
  
 
-#$psql lispdb
+#$psql railsdb
 
-#test $rails new test -d postgresql --skip-bundle
+#test $rails new test -d postgresql --skip-bundle && edit database.yml & bundle install  && rails g scaffold name:sting mail:string info:text && rake db:migrate
+
+
 
 
