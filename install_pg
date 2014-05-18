@@ -5,10 +5,41 @@ sudo /etc/init.d/postgresql start
 sudo su - postgres | psql | \password postgres && CREATE USER rails WITH PASSWORD '123456'; && CREATE DATABASE railsdb OWNER rails; && GRANT ALL PRIVILEGES ON DATABASE railsdb to rails; && \q
  
 
-#$psql railsdb
 
 #test $rails new railstest -d postgresql --skip-bundle && edit database.yml & bundle install  && rails g scaffold yourecord  name:string mail:string info:text && rake db:migrate
 
-
-
-
+##########################################################################################
+####rails@git:~$ psql railsdb
+####psql (9.3.4)
+####Type "help" for help.
+####
+####railsdb=> \l
+####                                  List of databases
+####   Name    |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges   
+####-----------+----------+----------+-------------+-------------+-----------------------
+#### postgres  | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+#### railsdb   | rails    | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =Tc/rails            +
+####           |          |          |             |             | rails=CTc/rails
+#### template0 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+####           |          |          |             |             | postgres=CTc/postgres
+#### template1 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+####           |          |          |             |             | postgres=CTc/postgres
+####(4 rows)
+####
+####railsdb=> 
+####railsdb=> \c railsdb 
+####You are now connected to database "railsdb" as user "rails".
+####railsdb=> \d
+####               List of relations
+#### Schema |       Name        |   Type   | Owner 
+####--------+-------------------+----------+-------
+#### public | schema_migrations | table    | rails
+#### public | yourecords        | table    | rails
+#### public | yourecords_id_seq | sequence | rails
+####(3 rows)
+####
+####railsdb=> 
+####
+####
+####
+####
