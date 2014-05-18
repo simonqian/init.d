@@ -45,3 +45,11 @@ $ ./install_nodejs
 ```bash
 $ ./install_rvm
 ```
+
+### Install pg
+
+```bash
+$ ./install_pg
+```
+
+

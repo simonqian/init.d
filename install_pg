@@ -1,0 +1,12 @@
+sudo apt-get install postgresql 
+sudo  apt-get install libpq-dev 
+gem install pg
+sudo su - postgres ## psql=#  \password 
+
+sudo /etc/init.d/postgresql start
+
+CREATE ROLE rails WITH LOGIN ENCRYPTED PASSWORD '123456' CREATEDB;
+
+#test rails new test -d postgresql --skip-bundle
+
+
