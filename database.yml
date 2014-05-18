@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  adapter: postgresql
+  database: railsdb ## Please create DB first!
+  pool: 5
+  username: rails
+  password: 123456
+  host: localhost
+
+test:
+  <<: *default
+  database: railsdb
+#
+production:
+  <<: *default
+  database: railsdb
+  username: rails
+  password: <%= ENV['RAILSPOSTSQL_DATABASE_PASSWORD'] %>
