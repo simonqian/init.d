@@ -7,7 +7,7 @@ sudo su - postgres | psql | \password postgres && CREATE USER rails WITH PASSWOR
 
 #$psql railsdb
 
-#test $rails new test -d postgresql --skip-bundle && edit database.yml & bundle install  && rails g scaffold name:sting mail:string info:text && rake db:migrate
+#test $rails new railstest -d postgresql --skip-bundle && edit database.yml & bundle install  && rails g scaffold name:sting mail:string info:text && rake db:migrate
 
 
 
