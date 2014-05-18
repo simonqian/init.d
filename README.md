@@ -14,6 +14,12 @@ Batch scripts for Ruby production environment install on Ubuntu Server.
 
 * Ubuntu Server 12.04
 
+
+##set ip
+```bash
+ # ./u_ip.sh
+```
+
 ## Usage
 
 Install packages first
