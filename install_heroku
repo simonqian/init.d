@@ -1,0 +1,49 @@
+
+#!/bin/bash
+{
+    echo "This script requires superuser access to install apt packages."
+    echo "You will be prompted for your password by sudo."
+
+    # clear any previous sudo permission
+    sudo -k
+
+    # run inside sudo
+    sudo sh <<SCRIPT
+
+  # add heroku repository to apt
+  echo "deb http://toolbelt.heroku.com/ubuntu ./" > /etc/apt/sources.list.d/heroku.list
+
+  # install heroku's release key for package verification
+  wget -O- https://toolbelt.heroku.com/apt/release.key | apt-key add -
+
+  # update your sources
+  apt-get update
+
+  # install the toolbelt
+  apt-get install -y heroku-toolbelt
+
+SCRIPT
+}
+
+
+
+
+
+###########################################################
+#########################################################
+
+ git init && git add . 
+ git commit -m "First Commit"   ## 如果不出现“create ...” 则 “rm .git” 重新再“git init && git add .”一次
+ heroku auth:login  ##填入帐号heroku.com密码
+ heroku create  ##建立 App
+ git remote -v   
+ git push heroku master   ##发生最多的事情的一步
+ heroku run rake db:migrate  ##将“rake db:migrate”命令传递至Heroku并执行，数据迁移至Heroku的postgresql上
+ heroku open   ## 启动应用，并打开页面
+
+
+###################################################
+################################################
+ssh-keygen -t rsa
+heroku keys:add
+

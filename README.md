@@ -64,3 +64,9 @@ $ ./install_pg
 $ ./install_emacs
 ```
 
+### Install Heroku
+
+```bash
+$ ./install_heroku
+```
+
