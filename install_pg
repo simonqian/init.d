@@ -40,6 +40,21 @@ sudo su - postgres | psql | \password postgres && CREATE USER rails WITH PASSWOR
 ####
 ####railsdb=> 
 ####
-####
-####
-####
+###################################################################
+
+### for Mac
+ranchodeiMac:~ emacs$ pg_ctl -D /usr/local/var/postgres  startserver starting
+ranchodeiMac:~ emacs$ createdb emacsdb -O emacs -E UTF8 -e
+CREATE DATABASE emacsdb OWNER emacs ENCODING 'UTF8';
+ranchodeiMac:~ emacs$ psql emacsdb
+psql (9.3.4)
+Type "help" for help.
+
+emacsdb=# \password emacs
+Enter new password:       #123456
+Enter it again:
+emacsdb=# GRANT ALL PRIVILEGES ON DATABASE emacsdb to emacs;
+GRANT
+emacsdb=# \q
+####################################################
+
