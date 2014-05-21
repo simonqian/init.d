@@ -30,8 +30,9 @@ SCRIPT
 
 
 ###########################################################
+##Notetice Heroku： Gem 式的 Bootstrap RailsApp 運行css還有js 
 #########################################################
- echo " gem 'rails_12factor',   group: :production " ####(0.0.2)唯一不能裝在本地的Gem包 ！！
+ echo " gem 'rails_12factor',   group: :production " ####(0.0.2)唯一不能裝在本地的Gem包 ！！也是讓Heroku自行加載的css還有js的最重要條件之一
  bundle install --without production #### 要执行 bundle install，并指定旗标 , 繞過'rails_12factor' Gem包
  rake assets:precompile   ###!!! 生成 Heroku 服务静态资源所需的文件，例如图片和 CSS
  git init && git add . 
