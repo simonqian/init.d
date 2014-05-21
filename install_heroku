@@ -51,3 +51,25 @@ ssh-keygen -t rsa
 heroku keys:clear
 heroku keys:add
 
+##############not clone #################
+->heroku login
+
+abc@gmail.com & password
+
+->cd C:\Users\yourusername\.ssh    (OR for cygwin shell ->cd ~/.ssh)
+
+->ssh-keygen -t rsa -f id_rsa
+
+if asks any passphrase don't use blank, fill with a passphrase,but not forget it.
+
+After generating the key you need to add it, like so
+
+$ ssh-add
+
+and it to heroku
+
+->heroku keys:add "id_rsa.pub"
+
+change directory to workspace, than
+
+->git clone git@heroku.com:stark-dawn-1234.git -o heroku
