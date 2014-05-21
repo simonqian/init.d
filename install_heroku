@@ -31,13 +31,15 @@ SCRIPT
 
 ###########################################################
 #########################################################
-
+ echo " gem 'rails_12factor',   group: :production " ####(0.0.2)唯一不能裝在本地的Gem包 ！！
+ bundle install --without production #### 要执行 bundle install，并指定旗标 , 繞過'rails_12factor' Gem包
+ rake assets:precompile   ###!!! 生成 Heroku 服务静态资源所需的文件，例如图片和 CSS
  git init && git add . 
  git commit -m "First Commit"   ## 如果不出现“create ...” 则 “rm .git” 重新再“git init && git add .”一次
  heroku auth:login  ##填入帐号heroku.com密码
  heroku create  ##建立 App
  git remote -v   
- git push heroku master   ##发生最多的事情的一步
+ git push heroku master   ##发生最多的事情的一步 ===>>用 ruby -e ' system "ls" while sleep 1' 加以信號輔助，防止push夭折
  heroku run rake db:migrate  ##将“rake db:migrate”命令传递至Heroku并执行，数据迁移至Heroku的postgresql上
  heroku open   ## 启动应用，并打开页面
 
