@@ -73,3 +73,55 @@ and it to heroku
 change directory to workspace, than
 
 ->git clone git@heroku.com:stark-dawn-1234.git -o heroku
+#####################################mutikey github & heroku############################
+rails@git:~$ ssh-keygen -t rsa -f ~/.ssh/id_rsa1.pub 
+Generating public/private rsa key pair.
+/home/rails/.ssh/id_rsa1.pub already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/rails/.ssh/id_rsa1.pub.
+Your public key has been saved in /home/rails/.ssh/id_rsa1.pub.pub.
+The key fingerprint is:
+c6:26:6c:dc:bd:49:88:10:a9:46:e3:1f:14:78:b1:c9 rails@git
+The key's randomart image is:
++--[ RSA 2048]----+
+|   .++           |
+|  +.++           |
+| o =E            |
+|  + .+ + o       |
+| . . .* S o      |
+|    .. + . o     |
+|          o      |
+|                 |
+|                 |
++-----------------+
+rails@git:~$ heroku login
+Enter your Heroku credentials.
+Email: chanshunli@gmail.com
+Password (typing will be hidden): 
+
+Authentication successful.
+rails@git:~$ 
+rails@git:~$ heroku keys:add
+Found the following SSH public keys:
+1) id_rsa.pub
+2) id_rsa1.pub
+3) id_rsa1.pub.pub
+Which would you like to use with your Heroku account? 3
+Uploading SSH public key /home/rails/.ssh/id_rsa1.pub.pub... done
+rails@git:~$ ls
+Desktop  myapp  yougit
+rails@git:~$ git clone git@heroku.com:shunlichan.git
+Cloning into 'shunlichan'...
+Fetching repository, done.
+remote: Counting objects: 158, done.
+remote: Compressing objects: 100% (121/121), done.
+remote: Total 158 (delta 27), reused 158 (delta 27)
+Receiving objects: 100% (158/158), 46.84 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (27/27), done.
+Checking connectivity... done.
+##################################################
+
+
+
