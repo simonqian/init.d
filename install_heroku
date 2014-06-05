@@ -124,4 +124,23 @@ Checking connectivity... done.
 ##################################################
 
 
+########################################Heroku gitpush again ,commit 2 change
 
+```sh
+$ git add .
+lisp@emacs:~/linachan$ git commit -m "2 Commit"
+[master 5f9f6a9] 2 Commit
+ 2 files changed, 10 insertions(+), 5 deletions(-)
+lisp@emacs:~/linachan$ heroku auth:login
+Enter your Heroku credentials.
+Email: chanshunli@gmail.com
+Password (typing will be hidden): 
+Authentication successful.
+lisp@emacs:~/linachan$ git remote -v 
+origin	git@heroku.com:linachan.git (fetch)
+origin	git@heroku.com:linachan.git (push)
+$ git push
+Fetching repository, done.
+Everything up-to-date
+```
+########################################
