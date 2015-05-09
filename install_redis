@@ -24,3 +24,10 @@ sudo chown redis.redis /var/lib/redis
 sudo chown redis.redis /var/log/redis
 
 sudo /etc/init.d/redis-server start
+
+# if you use mac, that's so fast.
+# 1. install brew
+#    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# 2. install redis
+#    brew install redis
+
