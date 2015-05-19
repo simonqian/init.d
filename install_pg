@@ -62,8 +62,13 @@ GRANT ALL PRIVILEGES ON DATABASE railsdb to rails;
  
 ##########################################################################################
 
-# rails operator
-#test $rails new railstest -d postgresql --skip-bundle && edit database.yml & bundle install  && rails g scaffold yourecord  name:string mail:string info:text && rake db:migrate
+#### rails operator
+# rails new railstest -d postgresql --skip-bundle
+# edit database.yml
+# bundle install
+# rails g scaffold yourecord  name:string mail:string info:text 
+# rake db:migrate
+####
 
 ##########################################################################################
 
