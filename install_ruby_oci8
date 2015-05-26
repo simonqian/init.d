@@ -13,3 +13,4 @@
 13. verify that DYLD_LIBRARY_PATH=/opt/oracle/instantclient_11_2 (be sure there's no trailing / after instantclient_11_2)
 14. verify ORACLE_HOME=/opt/oracle/instantclient_11_2
 15. gem install ruby-oci8
+## from http://stackoverflow.com/questions/11894194/how-to-install-ruby-oci8
