@@ -8,3 +8,5 @@ sudo apt-get install mongodb-10gen
 #    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 # 2. install mongodb
 #    brew install mongodb
+# 
+# start mongodb: 	/usr/local/opt/mongodb/bin/mongod --config /usr/local/etc/mongod.conf
