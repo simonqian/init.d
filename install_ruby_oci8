@@ -14,3 +14,27 @@
 14. verify ORACLE_HOME=/opt/oracle/instantclient_11_2
 15. gem install ruby-oci8
 ## from http://stackoverflow.com/questions/11894194/how-to-install-ruby-oci8
+
+####################################### sqlplus setting #######################################
+1. setting bash (~/.bashrc or ~/.bash_profile etc.)
+  export DYLD_LIBRARY_PATH=/opt/oracle/instantclient_11_2 
+  export ORACLE_HOME=$DYLD_LIBRARY_PATH 
+  export PATH=$ORACLE_HOME:$PATH
+
+2. setting connect
+    new a file /opt/oracle/instantclient_11_2/network/admin/tnsnames.ora
+    
+      tnsname =
+      (DESCRIPTION =
+         (ADDRESS_LIST =
+              (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.30.181)(PORT = 1521))
+                 )
+          (CONNECT_DATA =
+             (SERVICE_NAME = mdbldg)
+              )
+          )
+
+    # tnsname is a name. HOST is your host. SERVICE_NAME is your dbname.
+
+3. connect
+    sqlplus username/password@tnsname
