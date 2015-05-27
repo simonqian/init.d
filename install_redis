@@ -30,4 +30,6 @@ sudo /etc/init.d/redis-server start
 #    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 # 2. install redis
 #    brew install redis
+#
+# start redis: redis-server&
 
